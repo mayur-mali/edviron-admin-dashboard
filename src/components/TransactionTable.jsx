@@ -8,7 +8,7 @@ export default function TransactionTable() {
         avtar: "https://randomuser.me/api/portraits/women/57.jpg",
       },
       status: "verified",
-      ratings: 40,
+      ratings: 60,
       quantity: 400,
       amount: "400,000",
     },
@@ -18,7 +18,7 @@ export default function TransactionTable() {
         avtar: "https://randomuser.me/api/portraits/men/57.jpg",
       },
       status: "pending",
-      ratings: 57,
+      ratings: 30,
       quantity: 200,
       amount: "400,000",
     },
@@ -29,7 +29,7 @@ export default function TransactionTable() {
       },
 
       status: "verified",
-      ratings: 89,
+      ratings: 70,
       quantity: "40,000",
       amount: "1400,000",
     },
@@ -50,7 +50,7 @@ export default function TransactionTable() {
       },
 
       status: "verified",
-      ratings: 90,
+      ratings: 84,
       quantity: "200",
       amount: "100,000",
     },
@@ -61,7 +61,7 @@ export default function TransactionTable() {
       },
 
       status: "pending",
-      ratings: 49,
+      ratings: 50,
       quantity: 30,
       amount: "250,000",
     },
@@ -133,9 +133,10 @@ export default function TransactionTable() {
                   <td className="px-5 py-5  border-b border-gray-200 bg-[#FCFCFC] text-sm">
                     {item.ratings > 1 ? (
                       <div className="flex  items-center gap-x-2">
-                        <div className="h-1 w-40 bg-[#F2F2F2] rounded overflow-hidden">
+                        <div className="w-40 h-1  bg-[#F2F2F2] rounded overflow-hidden">
                           <div
-                            className={`h-full bg-custom-gray w-[${item.ratings}%]`}
+                            className={`bg-custom-gray h-full `}
+                            style={{ width: `${item.ratings}%` }}
                           ></div>
                         </div>
                         <p className="text-gray-900 whitespace-no-wrap">
@@ -181,20 +182,20 @@ export default function TransactionTable() {
         </div>
         <div className="px-5 py-5 bg-[#F7F7F7] border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
           <div className="inline-flex space-x-4 mt-2 xs:mt-0">
-            <button className="text-sm  text-gray-800 font-semibold  ">
+            <button className="text-sm text-custom-gray-light hover:text-custom-gray font-semibold  ">
               Previous page
             </button>
             <div className="flex space-x-2">
               {[1, 2, 3, 4, 5, 6, 7].map((page, i) => (
                 <span
-                  className="h-5 w-5 rounded-full bg-[#E6E6E6] flex justify-center items-center"
+                  className="h-5 w-5 rounded-full text-xs bg-[#E6E6E6] flex justify-center items-center"
                   key={i}
                 >
                   {page}
                 </span>
               ))}
             </div>
-            <button className="text-sm  text-gray-800 font-semibold  ">
+            <button className="text-sm text-custom-gray-light hover:text-custom-gray font-semibold  ">
               Next Page
             </button>
           </div>

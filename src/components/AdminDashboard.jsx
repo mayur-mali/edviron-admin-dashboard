@@ -7,7 +7,7 @@ import RecentTransaction from "./RecentTransaction";
 import HighestTransaction from "./HighestTransaction";
 import TimeAndDate from "./TimeAndDate";
 import TransactionTable from "./TransactionTable";
-
+import bgImg from "../assets/png/athletics-patterns.png";
 export default function AdminDashboard() {
   const [toggleSidebar, setToggleSidebar] = useState(false);
 
@@ -23,9 +23,27 @@ export default function AdminDashboard() {
           <div className="col-span-6 xl:col-span-4 ">
             <h3 className="text-custom-gray text-lg">In the last 30 days,</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 gap-8">
-              <div className="col-span-1 h-20 bg-gray-100 rounded"></div>
-              <div className="col-span-1 h-20 bg-gray-100 rounded"></div>
-              <div className="col-span-1 h-20 bg-gray-100 rounded"></div>
+              <div className="col-span-1 relative h-20  rounded overflow-hidden">
+                <img src={bgImg} alt="bg" className="w-full object-contain" />
+                <div className="absolute px-3 pt-5  text-white text-2xl top-0 left-0 w-full h-full bg-black bg-opacity-50">
+                  30,000
+                  <p className="text-xs mt-1 font-normal">payment</p>
+                </div>
+              </div>
+              <div className="col-span-1 relative h-20  rounded overflow-hidden">
+                <img src={bgImg} alt="bg" className="w-full object-contain" />
+                <div className="absolute px-3 pt-5  text-white text-2xl top-0 left-0 w-full h-full bg-black bg-opacity-50">
+                  250
+                  <p className="text-xs mt-1 font-normal">New users</p>
+                </div>
+              </div>
+              <div className="col-span-1 relative h-20  rounded overflow-hidden">
+                <img src={bgImg} alt="bg" className="w-full object-contain" />
+                <div className="absolute px-3 pt-5  text-white text-2xl top-0 left-0 w-full h-full bg-black bg-opacity-50">
+                  $400,000
+                  <p className="text-xs mt-1 font-normal">Revenue generated</p>
+                </div>
+              </div>
             </div>
             <h3 className="text-custom-gray text-lg mt-10 mb-2">All users</h3>
             <div className="flex gap-y-4 md:flex-row flex-col justify-between items-end">
@@ -51,10 +69,12 @@ export default function AdminDashboard() {
             </div>
             <TransactionTable />
           </div>
-          <div className="col-span-6 space-y-8 xl:col-span-2">
-            <RecentTransaction />
-            <HighestTransaction />
-            <TimeAndDate />
+          <div className="col-span-6  xl:col-span-2">
+            <div className="grid xl:grid-cols-1 gap-8 md:grid-cols-2">
+              <RecentTransaction />
+              <HighestTransaction />
+              <TimeAndDate />
+            </div>
           </div>
         </div>
       </div>

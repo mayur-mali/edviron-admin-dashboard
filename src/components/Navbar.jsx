@@ -5,7 +5,7 @@ import MenuIcon from "../assets/icon/MenuIcon";
 import UserImage from "../assets/png/Ellipse 1.png";
 export default function Navbar(props) {
   return (
-    <div className="h-12 flex items-center  justify-between">
+    <div className="h-12 flex sm:space-x-0 space-x-2 items-center  justify-between">
       <div className="max-w-xs sm:max-w-sm lg:max-w-lg py-2 px-4 bg-[#FAFAFA] flex items-center space-x-2 border rounded border-[#E6E6E6] w-full">
         <MagnifyGlassIcon />
         <input
