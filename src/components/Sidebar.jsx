@@ -13,7 +13,9 @@ export default function Sidebar(props) {
     <div
       className={
         "flex-none bg-[#E5E5E5] px-8 pt-[60px] z-50 fixed sm:w-72 w-60 h-screen " +
-        (props.toggleSidebar ? " xl:block hidden" : "w-72 animate__slideInLeft")
+        (props.toggleSidebar
+          ? " w-72 animate__slideInLeft"
+          : " xl:block hidden")
       }
     >
       <div>

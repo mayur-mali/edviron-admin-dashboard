@@ -24,21 +24,33 @@ export default function AdminDashboard() {
             <h3 className="text-custom-gray text-lg">In the last 30 days,</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 gap-8">
               <div className="col-span-1 relative h-20  rounded overflow-hidden">
-                <img src={bgImg} alt="bg" className="w-full object-contain" />
+                <img
+                  src={bgImg}
+                  alt="bg"
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute px-3 pt-5  text-white text-2xl top-0 left-0 w-full h-full bg-black bg-opacity-50">
                   30,000
                   <p className="text-xs mt-1 font-normal">payment</p>
                 </div>
               </div>
               <div className="col-span-1 relative h-20  rounded overflow-hidden">
-                <img src={bgImg} alt="bg" className="w-full object-contain" />
+                <img
+                  src={bgImg}
+                  alt="bg"
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute px-3 pt-5  text-white text-2xl top-0 left-0 w-full h-full bg-black bg-opacity-50">
                   250
                   <p className="text-xs mt-1 font-normal">New users</p>
                 </div>
               </div>
               <div className="col-span-1 relative h-20  rounded overflow-hidden">
-                <img src={bgImg} alt="bg" className="w-full object-contain" />
+                <img
+                  src={bgImg}
+                  alt="bg"
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute px-3 pt-5  text-white text-2xl top-0 left-0 w-full h-full bg-black bg-opacity-50">
                   $400,000
                   <p className="text-xs mt-1 font-normal">Revenue generated</p>
@@ -79,10 +91,10 @@ export default function AdminDashboard() {
         </div>
       </div>
       <div
-        onClick={() => setToggleSidebar(true)}
+        onClick={() => setToggleSidebar(false)}
         className={
-          "bg-black xl:hidden  fixed top-0 left-0 bg-opacity-50 z-40 h-full cursor-pointer w-full " +
-          (toggleSidebar ? " hidden" : " block")
+          "bg-black  fixed top-0 left-0 bg-opacity-50 z-40 h-full cursor-pointer w-full " +
+          (toggleSidebar ? " false" : " hidden")
         }
       ></div>
     </div>

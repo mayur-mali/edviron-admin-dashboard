@@ -144,7 +144,7 @@ export default function TransactionTable() {
                         </p>
                         <div
                           className={
-                            "inset-0  opacity-50 rounded-md  px-2 py-1 " +
+                            "inset-0 flex-none opacity-50 rounded-md  px-2 py-1 " +
                             (item.status === "verified"
                               ? " bg-green-200"
                               : item.status === "unverified"
@@ -152,7 +152,7 @@ export default function TransactionTable() {
                               : "bg-red-200")
                           }
                         >
-                          ↑{" "}
+                          ↑
                           {item.status === "verified"
                             ? "4"
                             : item.status === "unverified"
