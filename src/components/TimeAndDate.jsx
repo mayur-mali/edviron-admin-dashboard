@@ -10,12 +10,11 @@ export default function TimeAndDate() {
     };
   }, []);
 
-  //console.log(time.getFullYear());
   return (
     <div className="w-full bg-[#FCFCFC] p-8 rounded h-28 flex justify-between items-center">
       <div className="flex space-x-2 items-center">
         <div className="h-10 w-10 rounded text-xs flex justify-center items-center text-custom-gray font-normal border-2 border-[#E6E6E6] bg-[#FCFCFC] p-1">
-          {time.getHours > 9
+          {time.getHours() > 9
             ? time.getHours() % 12 || 12
             : "0" + (time.getHours() % 12) || 12}
         </div>
