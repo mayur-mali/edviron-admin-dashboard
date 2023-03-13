@@ -185,10 +185,10 @@ export default function TransactionTable() {
             <button className="text-sm text-custom-gray-light hover:text-custom-gray font-semibold  ">
               Previous page
             </button>
-            <div className="flex space-x-2">
+            <div className="flex  space-x-2">
               {[1, 2, 3, 4, 5, 6, 7].map((page, i) => (
                 <span
-                  className="h-5 w-5 rounded-full text-xs bg-[#E6E6E6] flex justify-center items-center"
+                  className="h-5 w-5 cursor-pointer rounded-full text-xs bg-[#E6E6E6] flex justify-center items-center"
                   key={i}
                 >
                   {page}

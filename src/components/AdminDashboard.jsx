@@ -94,7 +94,7 @@ export default function AdminDashboard() {
         onClick={() => setToggleSidebar(false)}
         className={
           "bg-black  fixed top-0 left-0 bg-opacity-50 z-40 h-full cursor-pointer w-full " +
-          (toggleSidebar ? " false" : " hidden")
+          (toggleSidebar ? "xl:hidden block" : " hidden")
         }
       ></div>
     </div>
