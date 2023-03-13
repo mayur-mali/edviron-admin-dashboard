@@ -9,7 +9,7 @@ export default function TimeAndDate() {
       clearInterval(timer);
     };
   }, []);
-
+  //console.log(time);
   return (
     <div className="w-full bg-[#FCFCFC] p-8 rounded h-28 flex justify-between items-center">
       <div className="flex space-x-2 items-center">
@@ -29,8 +29,10 @@ export default function TimeAndDate() {
       </div>
       <div className="text-base">
         {time.getDate()}/
-        {time.getMonth() > 9 ? time.getMonth() : "0" + time.getMonth()}/
-        {time.getFullYear()}
+        {time.getMonth() > 9
+          ? time.getMonth() + 1
+          : "0" + (time.getMonth() + 1)}
+        /{time.getFullYear()}
       </div>
     </div>
   );
